@@ -65,12 +65,12 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative mx-auto flex max-w-6xl flex-col items-center justify-center px-5 py-14 md:px-8 lg:py-20">
+      <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center justify-center px-5 py-14 md:px-8 lg:py-20">
         <div className="w-full max-w-2xl animate-fade-up text-center lg:text-left">
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
             Padel Coach · Kuala Lumpur
           </p>
-          <h1 className="mt-4 font-display text-[clamp(2rem,9vw,5.5rem)] uppercase leading-[0.9] tracking-tight text-balance">
+          <h1 className="mt-4 font-display text-[clamp(2rem,9vw,5.5rem)] uppercase leading-[1.1] md:leading-[0.9] tracking-tight text-balance">
             Your next match starts here.
           </h1>
           <p className="mt-6 text-base leading-relaxed text-muted-foreground text-pretty">
