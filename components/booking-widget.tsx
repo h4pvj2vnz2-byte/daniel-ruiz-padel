@@ -61,7 +61,7 @@ export function BookingWidget() {
             sb_review_image: '',
             dark_font_color: '#0B1220',
             light_font_color: '#0B1220',
-            btn_color_1: '#0B1220',
+            btn_color_1: '#C6FF3A',
             sb_company_label_color: '#0B1220',
             hide_img_mode: '1',
             show_sidebar: '1',

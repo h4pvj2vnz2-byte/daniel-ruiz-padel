@@ -132,6 +132,18 @@
     overflow-x: hidden !important;
   }
 
+  /* Mobile: taller iframe to show full widget content */
+  @media (max-width: 768px) {
+    #booking-widget {
+      min-height: 750px !important;
+    }
+
+    #booking-widget iframe {
+      height: 1400px !important;
+      min-height: 1400px !important;
+    }
+  }
+
   #booking-widget > * {
     width: 100% !important;
     max-width: 100% !important;

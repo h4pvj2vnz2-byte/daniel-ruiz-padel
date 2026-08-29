@@ -24,13 +24,13 @@ export function Book() {
         <div className="mt-8 flex w-full flex-col items-center">
           <div
             id="booking-widget"
-            className="w-full max-w-[900px] rounded-xl border border-line/40 bg-surface p-3 md:p-4"
+            className="w-full max-w-[900px] rounded-xl border border-line/40 bg-surface p-2 md:p-4"
             style={{
               display: 'flex',
               justifyContent: 'center',
-              alignItems: 'center',
+              alignItems: 'flex-start',
               height: 'min(720px, 85vh)',
-              minHeight: '600px',
+              minHeight: '750px',
               overflow: 'hidden',
               overflowY: 'auto',
             }}
