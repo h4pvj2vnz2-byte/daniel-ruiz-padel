@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm install:*)",
+      "Bash(npm -v)",
+      "Bash(nvm ls:*)",
+      "Bash(file public/*.png public/*.jpg)",
+      "Read(//Users/dani/Desktop/**)",
+      "Bash(npm --version)",
+      "Read(//usr/local/bin/**)",
+      "Bash(ls -la ~/.nvm/versions/node/*/bin/node)",
+      "Bash(nvm use:*)",
+      "Bash(npm run:*)",
+      "Bash(nvm list:*)",
+      "Bash(/Users/dani/.nvm/versions/node/v22.23.2/bin/node --version)",
+      "Bash(GIT_CURL_VERBOSE=1 git push -u origin main)",
+      "Bash(git reset:*)",
+      "Bash(git count-objects:*)",
+      "Bash(git gc:*)",
+      "Bash(git push:*)",
+      "Bash(git diff-tree:*)",
+      "Bash(gh auth:*)",
+      "Bash(git remote:*)",
+      "Bash(rm -rf .git)",
+      "Bash(git init:*)",
+      "Bash(git config:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}

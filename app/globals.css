@@ -1,0 +1,150 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-foreground: var(--surface-foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-line: var(--line);
+  --color-border: var(--line);
+
+  /* Fonts: Anton (display), Inter (body), Space Mono (scoreboard) */
+  --font-display: var(--font-anton), 'Arial Narrow', sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-space-mono), ui-monospace, monospace;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+}
+
+:root {
+  color-scheme: dark;
+  /* Night court palette */
+  --background: #0b1220;
+  --foreground: #eaf0f2;
+  --surface: #152238;
+  --surface-foreground: #eaf0f2;
+  --muted-foreground: #8a97ac;
+  --accent: #c6ff3a; /* optic padel-ball lime */
+  --accent-foreground: #0b1220;
+  --line: rgba(234, 240, 242, 0.12); /* thin court lines */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    scroll-behavior: smooth;
+  }
+  /* Fade-up on load */
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fade-up {
+    animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  /* Scroll reveal: fade-in + slide up */
+  @keyframes reveal-fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .reveal-fade-up {
+    animation: reveal-fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  /* Subtle Ken Burns effect (slow zoom) */
+  @keyframes ken-burns-subtle {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  .ken-burns-slow {
+    animation: ken-burns-subtle 8s ease-in-out infinite;
+  }
+
+  /* Smooth transitions for interactive elements */
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      a,
+      button {
+        @apply transition-[color,background-color,opacity,transform] duration-200 ease-out;
+      }
+      a:hover,
+      button:hover {
+        @apply -translate-y-0.5;
+      }
+      a:active,
+      button:active {
+        @apply translate-y-0;
+      }
+      a:focus-visible,
+      button:focus-visible {
+        @apply outline-2 outline-offset-2 outline-accent;
+      }
+    }
+  }
+
+  /* Reduced motion: disable animations */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* SimplyBook widget: scrollable container with high fixed iframe */
+  #booking-widget {
+    height: min(720px, 85vh) !important;
+    min-height: 600px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+
+  #booking-widget > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    flex-shrink: 0;
+  }
+
+  #booking-widget iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 1200px !important;
+    min-height: 1200px !important;
+    display: block !important;
+    border: none !important;
+  }
+}
