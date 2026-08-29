@@ -25,7 +25,18 @@
       "Bash(git init:*)",
       "Bash(git config:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git rm:*)",
+      "Bash(/usr/local/bin/git push:*)",
+      "Bash(curl -I https://raw.githubusercontent.com/h4pvj2vnz2-byte/daniel-ruiz-padel-web/main/public/hero/1.png)",
+      "Bash(curl -I https://daniel-ruiz-padel-web.vercel.app/hero/1.png)",
+      "Bash(curl -s \"https://api.github.com/repos/h4pvj2vnz2-byte/daniel-ruiz-padel-web/git/trees/main?recursive=1\")",
+      "Bash(curl -s \"https://api.github.com/repos/h4pvj2vnz2-byte/daniel-ruiz-padel-web/contents/public/hero\")",
+      "Bash(curl \"https://api.github.com/repos/h4pvj2vnz2-byte/daniel-ruiz-padel-web/contents/public/hero\")",
+      "Bash(curl -s \"https://api.github.com/repos/h4pvj2vnz2-byte/daniel-ruiz-padel-web/commits/main\")",
+      "Bash(curl \"https://github.com/h4pvj2vnz2-byte/daniel-ruiz-padel-web/blob/main/public/hero/1.png\")",
+      "Bash(gh repo:*)",
+      "Bash(curl -I https://raw.githubusercontent.com/h4pvj2vnz2-byte/daniel-ruiz-padel-web/main/TEST.txt)"
     ]
   }
 }
